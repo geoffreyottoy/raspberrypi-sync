@@ -13,7 +13,7 @@ def get_mac_addr(mac_addr):
          if mac_addr in df["mac"]:
             row = df.query(f'mac == "{mac_addr}"')[0]
             hostname = row["mac"]
-            row["last-seen] = datetime.datetime.utcnow()
+            row["last-seen"] = datetime.datetime.utcnow()
          else:
             # search a new hostname
             occupied_hostnames = df["mac"].tolist()
